@@ -1,10 +1,12 @@
 import react from 'react';
 
-const ItemListContainer = () => {
+const ItemListContainer = (props) => {
     return (
         <div>
             texto
+            {console.log(props.greetings)}
         </div>
+        
     );
 }
 
