@@ -10,18 +10,19 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   const incrementar = () => {
     if (contador < stock) setContador(contador + 1);
-    console.log(contador);
+   
   };
 
   const decrementar = () => {
-    if (contador > 0) setContador(contador - 1);
-    console.log(contador);
+     if (contador > 0)  setContador(contador - 1);
+    
   };
+ 
   return (
     <div>
-      <button onClick={incrementar}>+</button>
       <button onClick={decrementar}>-</button>
-      <button onClick={() => onAdd(contador)} className={`onAdd${contador > 0 ? "activo": "inactivo"}`}><CartWidget/> </button>
+      <button onClick={incrementar}>+</button>
+      <button onClick={() =>  onAdd(contador)} disabled={contador > 0 ? false : true} className={`onAdd${contador > 0 ? "activo": "inactivo"}`}><CartWidget/> </button>
       
       <p>{contador}</p>
     </div>

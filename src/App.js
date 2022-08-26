@@ -1,32 +1,31 @@
-import './App.css';
-import React from 'react';
-import NavBar from './components/NavBar';
-import logoskate from './assets/logoskate.png';
-import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount';
-import { useState } from 'react';
+import "./App.css";
+import React from "react";
+import NavBar from "./components/NavBar";
+import logoskate from "./assets/logoskate.png";
+import ItemListContainer from "./components/ItemListContainer";
+import ItemCount from "./components/ItemCount";
+import { useState } from "react";
 
 function App() {
+  const [cantproductos, setCantproductos] = useState(0);
 
-const [cantproductos, setCantproductos] = useState(0);
-
-  const onAdd = (productos) => 
-  {
-    setCantproductos(productos)
-    console.log(cantproductos, 'hola cantproducto');
+  const onAdd =async (productos) => {
+ await setCantproductos(productos);
+    // setTimeout(() => {
+    //   console.log("hay", cantproductos, "de productos agregados");
+    // }, 1000);
+    console.log(productos)
+    console.log(cantproductos)
   };
-
-
 
   return (
     <div className="App">
-      <NavBar/>
-      <ItemListContainer greetings={'hi'}/> 
-      <ItemCount stock={10} initial={1} onAdd={onAdd}/>
-      <img  src={logoskate} height="100" width="100" />
+      <NavBar />
+      <ItemListContainer greetings={"hi"} />
+      <ItemCount stock={10} initial={1} onAdd={onAdd} />
+      <img src={logoskate} height="100" width="100" />
     </div>
   );
 }
 
 export default App;
- 
