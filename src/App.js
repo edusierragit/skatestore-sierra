@@ -10,7 +10,7 @@ function App() {
   const [cantproductos, setCantproductos] = useState(0);
 
   const onAdd =async (productos) => {
- await setCantproductos(productos);
+  await setCantproductos(productos);
     // setTimeout(() => {
     //   console.log("hay", cantproductos, "de productos agregados");
     // }, 1000);
