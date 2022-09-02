@@ -1,13 +1,15 @@
 import React from 'react';
 
 const Item = ({data}) => {
-    const {id, title, price, pictureUrl} = data
+    const {id, title, price, pictureUrl, description} = data
+    
     return (
         <div>
             <div className="product" key={id}>
                 <h1> {title}</h1>
-                <h2>{price}</h2>
-                <h3>{pictureUrl}</h3>
+                <p>{price}</p>
+                <p>{description}</p>
+                <img src={pictureUrl} height="100" width="100" ></img>
                 </div>
         </div>
     )

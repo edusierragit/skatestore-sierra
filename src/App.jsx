@@ -21,7 +21,8 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer greetings={"hi"} />
+      <ItemListContainer />
+      <itemDetailContainer/>
       <ItemCount stock={10} initial={1} onAdd={onAdd} />
       <img src={logoskate} height="100" width="100" />
     </div>
