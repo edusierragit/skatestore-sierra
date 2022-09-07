@@ -2,7 +2,7 @@ import React from "react";
 import Item from "../components/Item";
 import {Link} from 'react-router-dom';
 
-const ItemList = ({props}) => {
+const ItemList = (props) => {
   console.log(props)
   
   return (
