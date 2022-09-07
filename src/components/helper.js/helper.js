@@ -1,5 +1,4 @@
 import React from "react";
-
 const productos = [
   {
     id: 1,
@@ -23,7 +22,7 @@ const productos = [
     price: "18960",
     description: "skate3",
     pictureUrl:
-      "https://www.versace.com/dw/image/v2/ABAO_PRD/on/demandware.static/-/Sites-ver-master-catalog/default/dwe5e6867b/original/90_ZSKATE001-ZWOOD001_Z7011_23_PrintedSkateboard-SportandLeisure-versace-online-store_4_8.jpg?sw=748&sh=1050&sm=fit",
+      "https://http2.mlstatic.com/D_NQ_NP_949600-MLA50024320314_052022-O.webp",
   },
   {
     id: 4,

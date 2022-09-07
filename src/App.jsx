@@ -5,27 +5,32 @@ import logoskate from "./assets/logoskate.png";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemCount from "./components/ItemCount";
 import { useState } from "react";
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 function App() {
   const [cantproductos, setCantproductos] = useState(0);
-
-  const onAdd =async (productos) => {
-  await setCantproductos(productos);
-    // setTimeout(() => {
-    //   console.log("hay", cantproductos, "de productos agregados");
-    // }, 1000);
-    console.log(productos)
-    console.log(cantproductos)
+  const onAdd = async (productos) => {
+    await setCantproductos(productos);
+    console.log(productos);
+    console.log(cantproductos);
   };
 
   return (
+    <BrowserRouter>
     <div className="App">
-      <NavBar />
-      <ItemListContainer />
-      <itemDetailContainer/>
+      <NavBar logoskate={logoskate}/>
+      www.skatestore.com/
+      <Routes>
+        <Route path='/' element={<ItemListContainer />}/>
+        <Route path='/item/:productId' element={<itemDetailContainer onAdd={onAdd} />}/>
+        <Route path='*' element={<ItemListContainer />}/>
+        <Route/>
+      </Routes>
       <ItemCount stock={10} initial={1} onAdd={onAdd} />
       <img src={logoskate} height="100" width="100" />
     </div>
+  
+    </BrowserRouter>
   );
 }
 

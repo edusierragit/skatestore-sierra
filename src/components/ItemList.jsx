@@ -1,20 +1,16 @@
 import React from "react";
 import Item from "../components/Item";
-import { useState, useEffect } from "react";
+import {Link} from 'react-router-dom';
 
-
-const ItemList = (props) => {
-   const [loading, setLoading] = useState(true)
+const ItemList = ({props}) => {
   console.log(props)
   
   return (
    
-        <div className="grid=product">
+        <div className="estilos-listado">
            {props.items.map((data) => (
             <Item key={data.name} data={data} />
-           
           ))} 
-
         </div>  
   );
 };

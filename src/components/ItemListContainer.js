@@ -7,6 +7,7 @@ const ItemListContainer = () => {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
     
+
     useEffect(() => {
         getFetch.then((data) => {
           setData(data);
