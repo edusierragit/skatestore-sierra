@@ -6,6 +6,7 @@ import ItemListContainer from "./components/ItemListContainer";
 import ItemCount from "./components/ItemCount";
 import { useState } from "react";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import ItemDetailContainer from "./components/ItemDetailContainer";
 
 function App() {
   const [cantproductos, setCantproductos] = useState(0);
@@ -22,7 +23,7 @@ function App() {
       www.skatestore.com/
       <Routes>
         <Route path='/' element={<ItemListContainer />}/>
-        <Route path='/item/:productId' element={<itemDetailContainer onAdd={onAdd} />}/>
+        <Route path='/item/:productId' element={<ItemDetailContainer onAdd={onAdd} />}/>
         <Route path='*' element={<ItemListContainer />}/>
         <Route/>
       </Routes>

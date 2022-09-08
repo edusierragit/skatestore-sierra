@@ -1,5 +1,5 @@
 import React from "react";
-const productos = [
+export const productos = [
   {
     id: 1,
     title: "1 Producto",
@@ -81,18 +81,18 @@ export const getFetch = new Promise((resolve, reject) => {
   }, 2000);
 });
 
-const item = {
-  id: 2,
-  title: "2 Producto",
-  description: "ITEMDETAIL CONTAINER",
-  price: "15000",
-  pictureUrl:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLnNOMWqBzR2eJQ28W2Sfgw13UHVZw53dYuxt8e2Pv3XsK1CjgV0xF5Vb1gCRpkHVkD-M&usqp=CAU",
-};
+// const item = {
+//   id: 2,
+//   title: "2 Producto",
+//   description: "ITEMDETAIL CONTAINER",
+//   price: "15000",
+//   pictureUrl:
+//     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLnNOMWqBzR2eJQ28W2Sfgw13UHVZw53dYuxt8e2Pv3XsK1CjgV0xF5Vb1gCRpkHVkD-M&usqp=CAU",
+// };
 
-export const getItem = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve(item);
-    reject((err) => console.log(err));
-  }, 2000);
-});
+// export const getItem = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve(item);
+//     reject((err) => console.log(err));
+//   }, 2000);
+// });
