@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import {Link} from 'react-router-dom';
 
-const Item = ({ data }) => {
+const Item = ({data}) => {
   const { id, title, price, pictureUrl, description } = data;
 
   return (
