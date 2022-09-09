@@ -3,11 +3,11 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
-const ItemDetail = (data) => {
-    
-  const { title, price, pictureUrl, description } = data;
-  console.log("data", data);
+const ItemDetail = ({item}) => {
 
+  const { title, price, pictureUrl, description } = item;
+  console.log("data", item);
+  
   return (
     <div >
       <Card border="dark" style={{ width: "18rem",  display: 'inline'}}>
@@ -20,8 +20,11 @@ const ItemDetail = (data) => {
             <Button variant="primary">AgregarCarrito</Button>
           </Link>
         </Card.Body>
-      </Card>
+      </Card> 
+   
+  
     </div>
+   
   );
 };
 export default ItemDetail;

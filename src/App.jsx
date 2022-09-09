@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path='/' element={<ItemListContainer />}/>
         <Route path='/item/:productId' element={<ItemDetailContainer onAdd={onAdd} />}/>
-        <Route path='*' element={<ItemListContainer />}/>
+        {/* <Route path='*' element={<ItemListContainer />}/> */}
         <Route/>
       </Routes>
       <ItemCount stock={10} initial={1} onAdd={onAdd} />
