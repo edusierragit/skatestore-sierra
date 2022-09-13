@@ -4,9 +4,8 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({item}) => {
-
-  const { title, price, pictureUrl, description } = item;
-  console.log("data", item);
+  console.log("SEXOOOOOOOOOOOOOO", item);
+  const {title, price, pictureUrl, description } = item;
   
   return (
     <div >
@@ -28,20 +27,4 @@ const ItemDetail = ({item}) => {
   );
 };
 export default ItemDetail;
-// import React from "react";
-// import Item from "./Item";
-// import { useState, useEffect } from "react";
 
-// const ItemDetail = (props) => {
-//   console.log(props)
-
-//   return (
-
-//     <div className="grid=product">
-
-//      <Item key={props.item.id} onAdd={props.onAdd} data={props.item} />
-
-//  </div>
-//   );
-// };
-// export default ItemDetail;

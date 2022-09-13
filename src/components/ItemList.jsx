@@ -3,7 +3,7 @@ import Item from "../components/Item";
 import {Link} from 'react-router-dom';
 
 const ItemList = (props) => {
-  console.log(props)
+  
   
   return (
    
