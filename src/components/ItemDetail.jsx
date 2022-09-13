@@ -4,12 +4,12 @@ import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({item}) => {
-  console.log("SEXOOOOOOOOOOOOOO", item);
+
   const {title, price, pictureUrl, description } = item;
   
   return (
-    <div >
-      <Card border="dark" style={{ width: "18rem",  display: 'inline'}}>
+    <div  >
+      <Card border="dark" style={{ display: 'inline'}}>
         <Card.Img variant="top" src={pictureUrl + "/50px60"} />
         <Card.Body>
           <Card.Title>{title}</Card.Title>

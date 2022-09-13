@@ -11,22 +11,22 @@ const NavBar= (logoskate) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#marcas">Marcas</Nav.Link>
-            <Nav.Link href="#longboards">Longboards</Nav.Link>
+            <Nav.Link href="Marcas">Marcas</Nav.Link>
+            <Nav.Link href="Longboards">Longboards</Nav.Link>
             <NavDropdown title="Accesorios" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#Ruedas">Ruedas</NavDropdown.Item>
-              <NavDropdown.Item href="#Tablas">
+              <NavDropdown.Item href="Ruedas">Ruedas</NavDropdown.Item>
+              <NavDropdown.Item href="Tablas">
                 Tablas
               </NavDropdown.Item>
-              <NavDropdown.Item href="#Lijas">Lijas</NavDropdown.Item>
+              <NavDropdown.Item href="Lijas">Lijas</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#Rulemanes">
+              <NavDropdown.Item href="Rulemanes">
                 Rulemanes
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link eventKey={2} href="#memes">
+            <Nav.Link eventKey={2} href="Contacto">
               Contacto
             </Nav.Link>
           </Nav>
@@ -39,3 +39,12 @@ const NavBar= (logoskate) => {
 }
 
 export default NavBar;
+
+// import Marcas from "./components/pages/Marcas";
+// import Contacto from "./components/pages/Contacto";
+// import Longboards from "./components/pages/Longboards";
+// import Accesorios from "./components/pages/Accesorios";
+// <Route path='/Marcas' element={<Marcas />}/>
+// <Route path='/Lonboards' element={<Longboards />}/>
+// <Route path='/Contacto' element={<Contacto />}/>
+// <Route path='/Accesorios' element={<Accesorios />}/>

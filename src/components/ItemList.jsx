@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 
 const ItemList = (props) => {
   
-  
   return (
    
         <div className="estilos-listado">
