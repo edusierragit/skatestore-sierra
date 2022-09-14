@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
         <h2>Cargado... </h2>
       ) : (
         <div style={{ display: 'inline', width: "5rem"}} >
-          <p style={{ width: "100%", color: "white" }}>item detail container</p>
+          <p style={{ width: "100%", color: "white" }}></p>
           <ItemDetail item={item} />
         </div>
       )}

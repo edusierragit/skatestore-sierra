@@ -6,7 +6,7 @@ const ItemList = (props) => {
   
   return (
    
-        <div className="estilos-listado">
+        <div >
            {props.items.map((data) => (
             <Item key={data.name} data={data} />
           ))} 

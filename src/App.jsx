@@ -3,8 +3,6 @@ import React from "react";
 import NavBar from "./components/NavBar";
 import logoskate from "./assets/logoskate.png";
 import ItemListContainer from "./components/ItemListContainer";
-import ItemCount from "./components/ItemCount";
-import { useState } from "react";
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { Link } from "react-router-dom";
@@ -16,16 +14,19 @@ import Lijas from "./components/pages/Accesorios/Lijas"
 import Ruedas from "./components/pages/Accesorios/Ruedas"
 import Rulemanes from "./components/pages/Accesorios/Rulemanes"
 import Tablas from "./components/pages/Accesorios/Tablas"
+import {CartProvider} from "./context/CartContext";
+import { CartContainer } from './components/CartContainer';
 
 function App() {
-  const [cantproductos, setCantproductos] = useState(0);
-  const onAdd = async (productos) => {
-    await setCantproductos(productos);
-    console.log(productos);
-    console.log(cantproductos);
-  };
+  // const [cantproductos, setCantproductos] = useState(0);
+  // const onAdd = async (productos) => {
+  //   await setCantproductos(productos);
+  //   console.log(productos);
+  //   console.log(cantproductos);
+  // };
 
   return (
+    <CartProvider>
     <BrowserRouter>
     <div className="App">
       <NavBar />
@@ -35,20 +36,24 @@ function App() {
           </Link> 
       <Routes>
         <Route path='/Marcas' element={<Marcas />}/>
-        <Route path='/Lonboards' element={<Longboards />}/>
+        <Route path='/Longboards' element={<Longboards />}/>
         <Route path='/Contacto' element={<Contacto />}/>    
         <Route path='/Ruedas' element={<Ruedas />}/>
         <Route path='/Tablas' element={<Tablas />}/>
         <Route path='/Lijas' element={<Lijas />}/>
         <Route path='/Rulemanes' element={<Rulemanes />}/>
-        <Route path='/item/:productId' element={<ItemDetailContainer onAdd={onAdd} />}/>
+        <Route path='/item/:productId' element={<ItemDetailContainer/>}/>
          <Route path='*' element={<ItemListContainer />}/> 
+         <Route path="/cart" element={<CartContainer/>}/>
       </Routes>
-      <ItemCount stock={10} initial={1} onAdd={onAdd} />
+     
     </div>
    
     </BrowserRouter>
+    </CartProvider>
   );
 }
 
 export default App;
+//<ItemCount stock={10} initial={1} onAdd={onAdd}/> 
+// {<ItemDetailContainer onAdd={onAdd} />}/>
