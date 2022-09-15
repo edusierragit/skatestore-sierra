@@ -19,8 +19,8 @@ const ItemDetail = ({item}) => {
   
   return (
     <div >
-      <Card style={{height:"100", border:"dark"}} >
-        <Card.Img className="container d-flex justify-content-center"  src={pictureUrl}  style = {{width: "10rem"}}  />
+      <Card style={{height:"100", border:"dark"}}>
+        <Card.Img className="container d-flex justify-content-center" src={pictureUrl} style={{width: "10rem"}}  />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>{description}</Card.Text>
@@ -28,14 +28,13 @@ const ItemDetail = ({item}) => {
           <ItemCount initial={1} stock={10} onAdd={onAdd}/>
             {
                 quantity>0 &&
-                <Link to="/cart">
-                    <Button>Ir al carrito</Button>
+                <Link to="/cart">          
+                    <Button>Finalizar Compra</Button>
+
                 </Link>
             }
         </Card.Body>
       </Card> 
-   
-  
     </div>
    
   );

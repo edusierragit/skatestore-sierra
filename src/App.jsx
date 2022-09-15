@@ -26,11 +26,10 @@ function App() {
   // };
 
   return (
-    <CartProvider>
+    <CartProvider >
     <BrowserRouter>
-    <div className="App">
+    <div className="App" style={{ background: "#BEBE25"}}>
       <NavBar />
-      
       <Link to={`/`}>
       <Button variant="dark"> <img src={logoskate} height ="100" width="100"/></Button>
           </Link> 

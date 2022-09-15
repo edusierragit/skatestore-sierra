@@ -22,9 +22,7 @@ const ItemListContainer = () => {
       {loading ? (
         <h2>Cargado... </h2>
       ) : 
-       <div>
-            texto 
-            
+       <div>            
             <ItemList items={data} />
         </div>
     }

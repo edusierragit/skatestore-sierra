@@ -62,7 +62,7 @@ export const productos = [
     price: "15000",
     description: "skate8",
     pictureUrl:
-      "https://www.digitalsport.com.ar/files/products/618d827a07e5f-570495-500x500.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPDOl1G_51FrqZfqJZZbP5bRJyMFZamEEzMQn_Xy8GgmugSf_fCN7sr00zkyFFsvRHm1Y&usqp=CAU",
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ export const getFetch = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve(productos);
     reject((err) => console.log(err));
-  }, 2000);
+  }, 1000);
 });
 
 export const getItem = (id) => {

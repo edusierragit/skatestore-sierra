@@ -9,10 +9,10 @@ const Item = ({data}) => {
 
   return (
     <div style={{ display: 'inline-block'}}>
-          <CardGroup  className="container d-flex justify-content-center" style={{ width: '12rem'}}>
-        <Card border="dark" style={{ width: '18rem'}}>
-      <Card.Img variant="top" src={pictureUrl + '/50px60'}  />
-      <Card.Body>
+          <CardGroup  className="container d-flex justify-content-center" style={{ width: '12rem',background: "#000000"}}>
+        <Card border="dark" style={{ width: '18rem', background: "#D1D120 "}}>
+      <Card.Img variant="top" src={pictureUrl + '/50px60'}/>
+      <Card.Body >
         <Card.Title>{title}</Card.Title>
         <Card.Text>
           {description}
@@ -21,7 +21,7 @@ const Item = ({data}) => {
           {price}
         </Card.Text>
         <Link to={`/item/${data.id}`}>
-        <Button variant="primary">Ver detalle </Button>
+        <Button variant="dark">Ver detalle </Button>
         </Link>
       </Card.Body>
     </Card> 
