@@ -19,7 +19,7 @@ const ItemDetail = ({item}) => {
   
   return (
     <div >
-      <Card style={{height:"100", border:"dark"}}>
+      <Card className="container d-flex justify-content-center" style={{ width: '12rem',background: "#D1D120 ", borderColor: "#000000"}}>
         <Card.Img className="container d-flex justify-content-center" src={pictureUrl} style={{width: "10rem"}}  />
         <Card.Body>
           <Card.Title>{title}</Card.Title>
@@ -29,7 +29,7 @@ const ItemDetail = ({item}) => {
             {
                 quantity>0 &&
                 <Link to="/cart">          
-                    <Button>Finalizar Compra</Button>
+                    <Button variant= "dark">Finalizar Compra</Button>
 
                 </Link>
             }
